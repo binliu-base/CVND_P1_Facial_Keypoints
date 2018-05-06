@@ -45,10 +45,6 @@ class Net(nn.Module):
     def forward(self, x):
 
         x = x.to(self.device)
-        # x = self.conv2_drop(self.pool(F.leaky_relu(self.bn2(self.conv2(F.leaky_relu(self.conv1(x), True))),True)))
-        # x = self.conv2_drop(self.pool(F.leaky_relu(self.bn4(self.conv4(F.leaky_relu(self.conv3(x), True))),True)))
-        # x = self.conv2_drop(self.pool(F.leaky_relu(self.bn6(self.conv6(F.leaky_relu(self.conv5(x), True))),True)))
-
         x = self.conv2_drop(self.pool(F.leaky_relu(self.bn1(self.conv1(x)))))
         x = self.conv2_drop(self.pool(F.leaky_relu(self.bn2(self.conv2(x)))))
         x = self.conv2_drop(self.pool(F.leaky_relu(self.bn3(self.conv3(x)))))
