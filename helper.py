@@ -16,7 +16,7 @@ def visualize_output(figure, test_image, test_output, i):
     predicted_key_pts = predicted_key_pts.cpu().numpy()    
     # undo normalization of keypoints      
     predicted_key_pts = (predicted_key_pts + 0.999)*s
-   
+
     # call show_all_keypoints
     # show_all_keypoints(np.squeeze(test_image), predicted_key_pts[0])
     # plt.axis('on')  
