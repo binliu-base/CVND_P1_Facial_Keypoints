@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import torch.nn.init as I
 
 
-class Net(nn.Module):
+class Net(nn.Module):  
 
     def __init__(self):
         super(Net, self).__init__()
